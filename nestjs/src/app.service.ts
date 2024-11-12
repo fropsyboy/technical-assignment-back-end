@@ -15,12 +15,6 @@ export interface Venue {
 @Injectable()
 export class AppService {
 
-  // async getVenues(limit: number): Promise<Venue[]> {
-  //   const query = 'SELECT * FROM venues LIMIT $1';
-  //   const venues = await this.dataSource.query(query, [limit]);
-  //   return venues;
-  // }
-
   async getVenues(limit: number): Promise<Venue[]> {
     const venues = await knexInstance
       .select('*')
